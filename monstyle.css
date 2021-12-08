@@ -5,6 +5,8 @@
 body
 {
     background-image: url(IMAGES/fond.jpg);
+    font-size:1em;
+
     
 }
 
@@ -117,7 +119,7 @@ h1
 	overflow: hidden;
 }
 	
-/* on prévoit un petit espace gris pour la timeline */
+/* un petit espace pour la timeline */
 #slideshow .container:after {
 	position:absolute;
 	bottom: 0; left:0;
@@ -127,8 +129,8 @@ h1
 	background: #999;
 }
 /* 
-   le conteneur des slides
-   en largeur il fait 100% x le nombre de slides
+   conteneur des slides
+   en largeur = 100% x le nombre de slides
 */
 #slideshow .slider {
 	position: absolute;
@@ -145,7 +147,7 @@ h1
 }
 
 
-/* styles de nos légendes */
+/* styles de mes légendes */
 #slideshow figcaption {
 	position:absolute;
 	left:0; right:0; bottom: 5px;
@@ -164,7 +166,7 @@ letter-spacing: 0.05em;
 	word-spacing: 0.05em;*/
 
 
-/* fonction d'animation : prefixer ! */
+/* fonction d'animation : prefixer */
 @keyframes slider {
 	0%, 20%, 100%	{ left: 0 }
 	25%, 45%		{ left: -100% }
@@ -172,9 +174,9 @@ letter-spacing: 0.05em;
 	75%, 95%		{ left: -300% }
 }
 
-/* complétez le sélecteur : */
+
 #slideshow .slider {
-	/* ... avec la propriété animation */
+
 	animation: slider 32s infinite;
 }
 
@@ -198,9 +200,9 @@ letter-spacing: 0.05em;
 	0%, 25%, 50%, 75%, 100%						{ bottom: -55px;	}
 	5%, 20%, 30%, 45%, 55%, 70%, 80%, 95%		{ bottom: 5px;		}
 }
-/* ajouter à l'élément : */
+
 #slideshow figcaption {
-	/* ... la propriété animation */
+
 	animation: figcaptionner 32s infinite;
 }
 
@@ -211,7 +213,7 @@ ul{
     background-color: blanchedalmond;
 }
 
-ul p{
+#marry{
   color: #b4752c;
   float: left;
 }
@@ -225,22 +227,11 @@ li a {
     text-decoration: none;
     display: block;
 }
-/* #nom{
-    overflow: hidden;
-    background-color: blanchedalmond;
-    list-style-type: none;
-    float:left;
-    padding: 14px 16px;
-    text-decoration: none;
-} */
-
-
-
-  
 
 
 .pro{
   text-align: center;
+  color: #b4752c;
 }
 
 #projets{
@@ -251,53 +242,88 @@ li a {
   display: flex;
   justify-content: space-around;
 }
-.flip-card {
-  background-color: rgb(241, 217, 190);
-  width: 400px;
+
+
+.wrapper{
   height: 400px;
-  perspective: 1000px;
-  text-align: center;
-  border: 2px solid #f1f1f1;
-}
-
-.flip-card-inner {
+  width: 320px;
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
-}
+	perspective: 1000px;
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
 }
-
-.flip-card-front, .flip-card-back {
+.wrapper .card{
   position: absolute;
-  width: 100%;
   height: 100%;
-  /* -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; */
-}
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+  box-shadow: rgb(145, 34, 34) 0px 10px 50px -10px ;
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
 }
-
-.flip-card-back {
-  background-color: rgb(240, 185, 140);
-  color: black;
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face{
+  background-color: lightcoral;
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 30px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  background: linear-gradient(375deg, transparent, transparent);
 }
 
 
 .ap{
   text-align: center;
+  color: #b4752c;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
+
+/* style des boutons pour ouvrir et fermer l'accordeon */
 .accordion {
   background-color: rgb(253, 222, 196);
   color: rgb(218, 140, 77);
@@ -311,7 +337,6 @@ li a {
   box-shadow: rgb(145, 34, 34) 0px 10px 50px -10px ;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   background-color: rgb(248, 240, 227);
 }
@@ -321,7 +346,6 @@ li a {
   padding: 0 18px;
   background-color: white;
   display: none;
-  overflow: hidden;
 }
 
 #contact {
@@ -344,7 +368,7 @@ li a {
 
 #contact .container .title {
     text-align: center;
-    color: rgb(218, 140, 77);
+    color: #b4752c;
     margin-bottom: 60px;
 }
 
@@ -395,7 +419,7 @@ li a {
     height: 50px;
     border-radius: 8px;
     border: none;
-    background-color: rgb(189, 113, 51);
+    background-color: #b4752c;
     color: white;
     font-weight: bold;
     font-size: 1.2em;
