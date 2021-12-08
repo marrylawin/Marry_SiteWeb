@@ -2,8 +2,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <!-- Importation mon CSS -->
+    <!-- Importation mon CSS et utilisation JavaScript-->
     <link rel="stylesheet" href="monstyle.css" />
+    <script >
+      var t;			
+      t = 1;
+    
+      function changerTaille(modif) {
+        t = t + modif;
+        document.getElementsByTagName("body")[0].style.fontSize = t + "em";		
+      } 	
+    
+    </script>
+  
 
     <!-- Police d'Ecriture -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +28,7 @@
 </head>
 
 <body>
+ 
     
 <div id="entete_titre">
     <H1> LAWIN Marry </H1>
@@ -27,15 +39,20 @@
     <!-- <div id="nom">
           <li>Lawin Marry</li>
     </div> -->
-
     <ul>
+        <li id="marry">Lawin Marry</li>
+
         <li><a href="#contact">Contact</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#Apropos">A propos</a></li>
         <li><a href="index.html">Acceuil</a></li>
-        <p> Marry Lawin </p>
     </ul>
+    
 </div>
+
+  <a href="#"><img src="IMAGES/--.PNG" onClick="changerTaille(-0.1); return false;" alt="Réduire la taille du texte" /></a>
+  <a href="#"><img src="IMAGES/++.PNG" onClick="changerTaille(0.1); return false;" alt="Aggrandir la taille du texte" /></a>
+
 
 <div id="photoM">
   <p><a href="IMAGES/Photo.CV.JPG"><img src="IMAGES/Photo.CV.JPG" WIDTH="170" HEIGHT="190" id="img" alt="Photo" class="image-ronde"></a></p>
@@ -79,90 +96,95 @@
 </div><br><br><br><br>
 
 <div class="pro">
-<p><strong><i>PROJETS</i></strong></p>
+
+  <p><strong><i>PROJETS</i></strong></p>
+
 </div>
 
+<a href="#"><img src="IMAGES/--.PNG" onClick="changerTaille(-0.1); return false;" alt="Réduire la taille du texte" /></a>
+<a href="#"><img src="IMAGES/++.PNG"  onClick="changerTaille(0.1); return false;" alt="Aggrandir la taille du texte" /></a> 
+
+<br>
+
 <section id="projets">
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="IMAGES/Rome.jpg" alt="Sicile" width = "400" height="400">
-          </div>
-          <div class="flip-card-back">
-            <h1>Voyage en Italie</h1>
-            <p>La Sicile</p>
-            <p> Un voyage en Sicile, c’est plonger dans une culture fascinante, à la découverte d’un patrimoine très riche, de paysages époustouflants mais aussi d’une gastronomie tout simplement incroyable. Laissez-vous charmer par la plus grande île de Méditerranée, bénéficiant d’un doux climat tout au long de l’année.</p>
-          </div>
-        </div>
+  <div class="wrapper">
+    <div class="card front-face">
+      <img src="IMAGES/AfriqueDuSud2.jpg" alt="AfriqueDuSud">
+    </div>
+    <div class="card back-face">
+      <div class="info">
+        <div class="title">Voyage en Afrique Du Sud</div>
+        <p>User interface designer and <br>front-end developer</p>
       </div>
-      
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="IMAGES/Tokyo.jpg" alt="Tokyo" width = "400" height="400">
-          </div>
-          <div class="flip-card-back">
-            <h1>Voyage au Japon</h1>
-            <p>Tokyo</p>
-            <p>Entre modernité et tradition, le Japon est un étonnant pays que vous serez ravis de découvrir le temps d'un week-end ou d'un séjour plus long. Cette destination des contrastes réserve à ses visiteurs de nombreuses surprises. Si Tokyo et ses buildings, ses spectacles de nuit et ses néons vous fascinent, vous serez encore plus sous le charme de la campagne japonaise.</p>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="IMAGES/san diego.jpg" alt="San Diego" width = "400" height="400">
-          </div>
-          <div class="flip-card-back">
-            <h1>Voyage aux Etats Unis</h1>
-            <p> Diego, CA</p>
-            <p>Partez à l'aventure et découvrez les plus beaux sites de San Diego. Apprenez-en davantage sur la ville et partez en croisière sur la baie. Selon l'option sélectionnée, participez à une visite narrée de manière professionnelle et découvrez le Coronado Bridge, des navires militaires et des attractions en bord de mer. </p>
-          </div>
-        </div>
+  <div class="wrapper">
+    <div class="card front-face">
+      <img src="IMAGES/Sydney.jpg" alt="Sydney">
+    </div>
+    <div class="card back-face">
+      <div class="info">
+        <div class="title">Voyage en Australie</div>
+        <p>User interface designer and <br>front-end developer</p>
       </div>
-    </section>
+    </div>
 
-    <br><br>
-
-    <section id="projets2">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="IMAGES/Montreal.jpg" alt="Montreal" width = "400" height="400">
-          </div>
-          <div class="flip-card-back">
-            <h1>Voyage au Canada</h1>
-            <p>Montreal</p>
-          </div>
-        </div>
+  </div><div class="wrapper">
+    <div class="card front-face">
+      <img src="IMAGES/Rome.jpg" alt="Rome">
+    </div>
+    <div class="card back-face">
+      <div class="info">
+        <div class="title">Voyage en Italie</div>
+        <p>User interface designer and <br>front-end developer</p>
       </div>
+    </div>
+  </div>
 
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="IMAGES/Sydney.jpg" alt="Sydney" width = "400" height="400">
-          </div>
-          <div class="flip-card-back">
-            <h1>Voyage en Australie</h1>
-            <p>Sydney</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="IMAGES/Afrique Du Sud.jpg" alt="Afrique du sud" width = "400" height="400">
-          </div>
-          <div class="flip-card-back">
-            <h1>Voyage en Afrique</h1>
-            <p>Afrique du Sud</p>
-          </div>
-        </div>
-      </div>
 </section>
+
+<br><br><br>
+
+  <section id="projets2">
+  <div class="wrapper">
+    <div class="card front-face">
+      <img src="IMAGES/Tokyo.jpg" alt="Tokyo">
+    </div>
+    <div class="card back-face">
+      <div class="info">
+        <div class="title">Voyage au Japon</div>
+        <p>Entre modernité et tradition, le Japon est un étonnant pays que vous serez ravis de découvrir le temps d'un week-end ou d'un séjour plus long. Cette destination des contrastes réserve à ses visiteurs de nombreuses surprises. Si Tokyo et ses buildings, ses spectacles de nuit et ses néons vous fascinent, vous serez encore plus sous le charme de la campagne japonaise.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="card front-face">
+      <img src="IMAGES/sandiego2.jpg" alt="SanDiego">
+    </div>
+    <div class="card back-face">
+      <div class="info">
+        <div class="title">Voyage aux Etats-Unis</div>
+        <p>Partez à l'aventure et découvrez les plus beaux sites de San Diego. Apprenez-en davantage sur la ville et partez en croisière sur la baie. Selon l'option sélectionnée, participez à une visite narrée de manière professionnelle et découvrez le Coronado Bridge, des navires militaires et des attractions en bord de mer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="card front-face">
+      <img src="IMAGES/Montreal.jpg" alt="Montreal">
+    </div>
+    <div class="card back-face">
+      <div class="info">
+        <div class="title">Voyage au Canada</div>
+        <p>User interface designer and <br>front-end developer</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <br><br>
 
 
@@ -170,6 +192,7 @@
   <p><strong><i>A PROPOS </i></strong></p>
   </div>
 
+  
 <section id="Apropos">
 
   
@@ -188,6 +211,12 @@
       <p></p>
     </div>
 </section>
+<br><br>
+
+
+<a href="#"><img src="IMAGES/--.PNG" onClick="changerTaille(-0.1); return false;" alt="Réduire la taille du texte" /></a>
+<a href="#"><img src="IMAGES/++.PNG"  onClick="changerTaille(0.1); return false;" alt="Aggrandir la taille du texte" /></a>
+
 
 <section id="contact">
     <div class="container">
@@ -196,9 +225,9 @@
             <h3> Contactez-nous </h3>
         </div>
         <FORM ACTION="mailto:marrylawin@live.fr" METHOD="post">
-            <INPUT TYPE="text" name = "name" PLACEHOLDER="Entrez votre nom..." required="">
-            <INPUT TYPE="text" name = "lastname" PLACEHOLDER="Entrez votre prénom..." required="">
-            <INPUT TYPE="text" name = "email" PLACEHOLDER="Entrez votre email..." required="">
+            <INPUT TYPE="text" name = "name" PLACEHOLDER="Entrez votre nom..." required="" minlength="3">
+            <INPUT TYPE="text" name = "lastname" PLACEHOLDER="Entrez votre prénom..." required="" minlength="3">
+            <INPUT TYPE="text" name = "email" PLACEHOLDER="Entrez votre email..." required="" minlength="3">
             <textarea name = "message" PLACEHOLDER = "Entrez votre message"></textarea>
             <button TYPE="submit">Envoyer</button>
         </FORM>
