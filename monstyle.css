@@ -13,13 +13,13 @@ body
 @font-face {
     font-family: "IBMPlexSans";
     src: url(fonts/IBMPlexSans-Bold.ttf) format(truetype);
-    font-weight: normal;
+    font-weight: normal; 
 
 }
 
 @media all and (max-width: 1240px)
 {
-  #entete_titre, .pro, #menu, #contenu, #projets, #projets2, #slideshow
+  #entete_titre, .pro, #menu, #contenu, #projets, #projets2, #slideshow, .container, .c_slider, .slider, #timeline
   {
     display: flex;
     justify-content: space-around;
@@ -322,9 +322,33 @@ li a {
   color: #b4752c;
 }
 
-
-/* style des boutons pour ouvrir et fermer l'accordeon */
+/* Style des boutons qui ouvrent et ferment l'accordeon */
 .accordion {
+  background-color: blanchedalmond;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #b4752c;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(250, 236, 215);
+  display: none;
+  overflow: hidden;
+}
+/* style des boutons pour ouvrir et fermer l'accordeon */
+/* .accordion {
   background-color: rgb(253, 222, 196);
   color: rgb(218, 140, 77);
   cursor: pointer;
@@ -335,18 +359,18 @@ li a {
   outline: none;
   transition: 0.4s;
   box-shadow: rgb(145, 34, 34) 0px 10px 50px -10px ;
-}
+} */
 
-.active, .accordion:hover {
+/* .active, .accordion:hover {
   background-color: rgb(248, 240, 227);
-}
+} */
 
 /* Style the accordion panel. Note: hidden by default */
-.panel {
+/* .panel {
   padding: 0 18px;
   background-color: white;
   display: none;
-}
+} */
 
 #contact {
   padding: 60px 0;
