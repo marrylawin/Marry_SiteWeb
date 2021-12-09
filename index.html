@@ -195,21 +195,40 @@
   
 <section id="Apropos">
 
-  
   <button class="accordion">Transports</button>
-    <div class="panel">
-      <p></p>
-    </div>
+<div class="panel">
+  <p></p>
+</div>
 
-  <button class="accordion">Logements</button>
-    <div class="panel">
-      <p></p>
-    </div>
+<button class="accordion">Logements</button>
+<div class="panel">
+  <p></p>
+</div>
 
-  <button class="accordion">Activités</button>
-    <div class="panel">
-      <p></p>
-    </div>
+<button class="accordion">Activités </button>
+<div class="panel">
+  <p> De nombreuses activitées vous seront proposez selon la destination que vous aurez choisit, en voici certaines que vous pourriez vouloir faire : 
+    <br>Safari,jet ski, visite guidée, surf, acrobranche, parcs d'attractions, découverte des gouts,  </p>
+</div>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* mettre en surbrillance le bouton qui contrôle le panneau */
+    this.classList.toggle("active");
+
+    /* Basculer entre le masquage et l’affichage du panneau */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 </section>
 <br><br>
 
